@@ -24,10 +24,5 @@ btn.addEventListener("click", function() {
         const div = document.createElement("div")
         container.appendChild(div).classList.add("grid-item")
    }
-   gridItem = document.querySelectorAll(".grid-item")
-   gridItem.forEach(item => item.addEventListener("mouseover", 
-function() {
-    item.style.backgroundColor = "blue"
-}))
 })
 
