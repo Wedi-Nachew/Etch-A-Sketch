@@ -8,7 +8,11 @@ function grids() {
 }
 grids()
 const gridItem = document.querySelectorAll(".grid-item")
-gridItem.forEach(item => item.addEventListener("hover", 
+gridItem.forEach(item => item.addEventListener("mouseover", 
 function() {
     item.style.backgroundColor = "blue"
 }))
+/*gridItem.forEach(item => item.addEventListener("mouseout", 
+function() {
+    item.style.backgroundColor = ""
+}))*/
