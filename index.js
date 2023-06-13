@@ -1,7 +1,7 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#ask");
 btn.addEventListener("click", function() {
-    prompt("how many columns and rows do you want to create")
+    let n = prompt("how many columns and rows do you want to create")
 })
 
 function grids() {
