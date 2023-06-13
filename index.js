@@ -12,7 +12,7 @@ gridItem.forEach(item => item.addEventListener("mouseover",
 function() {
     item.style.backgroundColor = "blue"
 }))
-/*gridItem.forEach(item => item.addEventListener("mouseout", 
+gridItem.forEach(item => item.addEventListener("mouseout", 
 function() {
     item.style.backgroundColor = ""
-}))*/
+}))
