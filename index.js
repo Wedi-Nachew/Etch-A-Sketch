@@ -21,10 +21,11 @@ btn.addEventListener("click", function() {
     while(container.firstChild){
         container.removeChild(container.firstChild)
     }
-    for(let i=1; i <= (numofGrids**2); i++){
-        const div = document.createElement("div")
-        container.appendChild(div).classList.add("grid-item")
-   }
+    grids(numofGrids)
+//     for(let i=1; i <= (numofGrids**2); i++){
+//         const div = document.createElement("div")
+//         container.appendChild(div).classList.add("grid-item")
+//    }
    gridItem = document.querySelectorAll(".grid-item")
    gridItem.forEach(item => item.addEventListener("mouseover", 
 function() {
