@@ -15,7 +15,7 @@ grids()
 let gridItem = document.querySelectorAll(".grid-item")
 gridItem.forEach(item => item.addEventListener("mouseover", 
 function() {
-    item.style.backgroundColor = "blue";
+    item.style.backgroundColor = `rgb(${red},${green},${blue})`;
 }))
 btn.textContent = "Adject number of grids"
 btn.addEventListener("click", function() {
@@ -27,7 +27,7 @@ btn.addEventListener("click", function() {
    gridItem = document.querySelectorAll(".grid-item")
    gridItem.forEach(item => item.addEventListener("mouseover", 
 function() {
-    item.style.backgroundColor = "blue";
+    item.style.backgroundColor = `rgb(${red},${green},${blue})`;
 }))
 })
 
