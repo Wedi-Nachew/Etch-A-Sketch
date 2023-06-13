@@ -6,9 +6,7 @@ let  grids = (num=16) => {
     for(let i=1; i <= (num**2); i++){
         const div = document.createElement("div")
         container.appendChild(div).classList.add("grid-item")
-        div.style.backgroundColor = "yellow"
-        div.style.height = `${(102400/(num**2))**(1/2)}px`
-        div.style.width = `${(102400/(num**2))**(1/2)}px`
+        div.style.cssText = `background-color: yellow; height:${(102400/(num**2))**(1/2)}px; width: ${(102400/(num**2))**(1/2)}px` 
    }
 }
 grids()
