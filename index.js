@@ -7,4 +7,8 @@ function grids() {
    }
 }
 grids()
-
+const gridItem = document.querySelectorAll(".grid-item")
+gridItem.forEach(item => item.addEventListener("hover", 
+function() {
+    item.style.backgroundColor = "blue"
+}))
