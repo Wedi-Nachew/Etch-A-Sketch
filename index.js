@@ -1,6 +1,8 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#ask");
-
+let red = Math.floor(Math.random() * 257)
+let green = Math.floor(Math.random() * 257)
+let blue = Math.floor(Math.random() * 257)
 
 let  grids = (num=16) => {
     for(let i=1; i <= (num**2); i++){
@@ -22,14 +24,10 @@ btn.addEventListener("click", function() {
         container.removeChild(container.firstChild)
     }
     grids(numofGrids)
-//     for(let i=1; i <= (numofGrids**2); i++){
-//         const div = document.createElement("div")
-//         container.appendChild(div).classList.add("grid-item")
-//    }
    gridItem = document.querySelectorAll(".grid-item")
    gridItem.forEach(item => item.addEventListener("mouseover", 
 function() {
-    item.style.backgroundColor = "blue"
+    item.style.backgroundColor = "blue";
 }))
 })
 
