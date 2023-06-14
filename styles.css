@@ -1,4 +1,4 @@
-* {
+.grid-item {
     box-sizing: border-box;
 }
 
@@ -14,8 +14,6 @@ body {
     justify-content: space-between;
     gap: 10px;
     background-color: #a8dadc;
-    flex-basis: 0;
-    flex-grow: 1;
 }
 
  #marker {
@@ -27,11 +25,7 @@ body {
     align-items: center;
  }
 
- /* #marker {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
- } */
+
 
  #container {
     display: flex;
