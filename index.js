@@ -84,7 +84,13 @@ function eraser() {
     gridItem.forEach(item => item.addEventListener("mouseover", ()=> {
         item.style.backgroundColor = `${container.style.backgroundColor}`
     }))
+    console.log("clear")
 }
+
+function clearAll() {
+    gridItem.forEach(item => item.style.backgroundColor = `${container.style.backgroundColor}`)
+}
+
 /*function border(){
     gridBorder.addEventListener("change", function (){
     if(this.checked){
