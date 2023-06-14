@@ -92,3 +92,5 @@ function clearAll() {
     })
     
 }
+
+const hideGrids = document.getElementById("hide-grids")
