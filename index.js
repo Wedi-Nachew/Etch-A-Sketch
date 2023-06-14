@@ -1,6 +1,5 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#ask");
-btn.textContent = "Number of Grids"
 const red = document.querySelector("#red")
 const white = document.querySelector("#white")
 const black = document.querySelector("#black")
