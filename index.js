@@ -84,28 +84,9 @@ function eraser() {
     gridItem.forEach(item => item.addEventListener("mouseover", ()=> {
         item.style.backgroundColor = `${container.style.backgroundColor}`
     }))
-    console.log("clear")
 }
 
 function clearAll() {
     gridItem.forEach(item => item.style.backgroundColor = `${container.style.backgroundColor}`)
+    backgroundColor(option)
 }
-
-/*function border(){
-    gridBorder.addEventListener("change", function (){
-    if(this.checked){
-        gridItem.forEach(item => item.addEventListener("mouseover", 
-        function() {
-            item.style.borderColor= "black";
-            item.style.borderSize = "1px"
-            item.style.borderStyle = "solid"
-        })) 
-    } else {
-        gridItem.forEach(item => item.addEventListener("mouseover", 
-        function() {
-            item.style.cssText = "border: none;"
-        })) 
-    }
-    
-})
-}*/
