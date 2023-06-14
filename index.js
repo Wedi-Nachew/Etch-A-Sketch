@@ -1,5 +1,11 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#ask");
+const red = document.querySelector("#red")
+const white = document.querySelector("#white")
+const black = document.querySelector("#black")
+const green = document.querySelector("#green")
+const multiColor = document.querySelector("#multi-color")
+const gridBorder = document.querySelector("#grid-border")
 let  grids = (num=16) => {
     for(let i=1; i <= (num**2); i++){
         const div = document.createElement("div")
