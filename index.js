@@ -1,11 +1,14 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#ask");
+btn.textContent = "Number of Grids"
 const red = document.querySelector("#red")
 const white = document.querySelector("#white")
 const black = document.querySelector("#black")
 const green = document.querySelector("#green")
 const multiColor = document.querySelector("#multi-color")
 const gridBorder = document.querySelector("#grid-border")
+
+
 let  grids = (num=16) => {
     for(let i=1; i <= (num**2); i++){
         const div = document.createElement("div")
@@ -14,31 +17,27 @@ let  grids = (num=16) => {
    }
 }
 grids()
+
+
 let gridItem = document.querySelectorAll(".grid-item")
-gridItem.forEach(item => item.addEventListener("mouseover", 
-function() {
-    for(let i=1; i< gridItem.length; i++){
-        const red = Math.floor(Math.random() * 256)
-        const green = Math.floor(Math.random() * 256)
-        const blue = Math.floor(Math.random() * 256)
-        item.style.backgroundColor = `rgb(${red},${green},${blue})`;
-    }
-}))
-btn.textContent = "Number of Grids"
+gridItem.forEach(item => item.addEventListener("mouseover", colors()))
+
+
+
 btn.addEventListener("click", function() {
     let numofGrids = prompt("how many columns and rows do you want to create")
+
     while(container.firstChild){
         container.removeChild(container.firstChild)
     }
-    grids(numofGrids)
+
+   grids(numofGrids)
+
    gridItem = document.querySelectorAll(".grid-item")
-   gridItem.forEach(item => item.addEventListener("mouseover", 
-function() {
-    item.style.backgroundColor = `rgb(${red},${green},${blue})`;
-}))
+   gridItem.forEach(item => item.addEventListener("mouseover", colors()))
 })
 
-function colors(WhichOne){
+function colors(WhichOne = "black"){
     if(WhichOne== "red") {
         gridItem.forEach(item => item.addEventListener("mouseover", 
             function() {
@@ -68,5 +67,23 @@ function colors(WhichOne){
             item.style.backgroundColor = `rgb(${red},${green},${blue})`;
         }
     })) 
+    }
 }
-}
+/*function border(){
+    gridBorder.addEventListener("change", function (){
+    if(this.checked){
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+        function() {
+            item.style.borderColor= "black";
+            item.style.borderSize = "1px"
+            item.style.borderStyle = "solid"
+        })) 
+    } else {
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+        function() {
+            item.style.cssText = "border: none;"
+        })) 
+    }
+    
+})
+}*/
