@@ -94,3 +94,6 @@ function clearAll() {
 }
 
 const hideGrids = document.getElementById("hide-grids")
+hideGrids.addEventListener("click", ()=> {
+    gridItem.forEach(item => item.style.cssText = "border: none;")
+})
