@@ -92,3 +92,9 @@ button {
 p {
     font-weight: 700;
 }
+#border-container{
+    display: flex;
+}
+#border-container p {
+    font-weight: 500;
+}
