@@ -93,3 +93,19 @@ button {
 p {
     font-weight: 700;
 }
+#border-container{
+    display: flex;
+    border: 1px solid gray;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+#border-container p {
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 3px;
+   
+   
+}
