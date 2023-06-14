@@ -7,18 +7,29 @@
         <script src="index.js" defer></script>
     </head>
     <body>
-    <div class="super-container">
-        <div id="container"></div>
-        <div id="options">
-            <button id="ask"></button>
-            <button id="white" onclick="colors('white')">White</button>
-            <button id="black" onclick="colors('black')">Black</button>
-            <button id="green" onclick="colors('green')">Green</button>
-            <button id="red" onclick="colors('red')">Red</button>
-            <button id="multi-colors" onclick="colors('multi-color')">Multi-Color</button>
-            <input type="checkbox" id="grid-border">
-            <p style="display: inline;">Border</p>
+        <h1>Etch-a-Sketch</h1>
+        <div id="super-container">
+            <div id="options">
+                <button id="ask"></button>
+                <div id="marker">
+                    <p>Marker Color</p>
+                    <button id="white" onclick="colors('white')">White</button>
+                    <button id="black" onclick="colors('black')">Black</button>
+                    <button id="green" onclick="colors('green')">Green</button>
+                    <button id="red" onclick="colors('red')">Red</button>
+                    <button id="multi-colors" onclick="colors('multi-color')">Multi-Color</button>
+                </div>
+            </div>
+            <div id="container"></div>
+            <div id="background">
+                <p>Background Color</p>
+                <button id="white-bkg" onclick="colors('white-bkg')">White</button>
+                <button id="black-bkg" onclick="colors('black-bkg')">Black</button>
+                <button id="green-bkg" onclick="colors('green-bkg')">Green</button>
+                <button id="red-bkg" onclick="colors('red-bkg')">Red</button>
+            </div>
+            <!-- <input type="checkbox" id="grid-border">
+            <p style="display: inline;">Border</p> -->
         </div>
-    </div>
     </body>
 </html>
