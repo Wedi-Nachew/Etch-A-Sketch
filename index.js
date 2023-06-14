@@ -24,7 +24,7 @@ function() {
         item.style.backgroundColor = `rgb(${red},${green},${blue})`;
     }
 }))
-btn.textContent = "Adject number of grids"
+btn.textContent = "Number of Grids"
 btn.addEventListener("click", function() {
     let numofGrids = prompt("how many columns and rows do you want to create")
     while(container.firstChild){
@@ -38,3 +38,35 @@ function() {
 }))
 })
 
+function colors(WhichOne){
+    if(WhichOne== "red") {
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+            function() {
+    item.style.backgroundColor = "red";
+            }))
+    } else if (WhichOne== "white") {
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+            function() {
+    item.style.backgroundColor = "white";
+            }))
+    } else if (WhichOne== "green") {
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+            function() {
+    item.style.backgroundColor = "green";
+            }))
+    } else if (WhichOne== "black") {
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+            function() {
+    item.style.backgroundColor = "black";
+            }))
+    } else if (WhichOne== "multi-color") {
+        gridItem.forEach(item => item.addEventListener("mouseover", 
+        function() {for(let i=1; i< gridItem.length; i++){
+            const red = Math.floor(Math.random() * 256)
+            const green = Math.floor(Math.random() * 256)
+            const blue = Math.floor(Math.random() * 256)
+            item.style.backgroundColor = `rgb(${red},${green},${blue})`;
+        }
+    })) 
+}
+}
