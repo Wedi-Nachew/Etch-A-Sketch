@@ -4,7 +4,7 @@ let  grids = (num=16) => {
     for(let i=1; i <= (num**2); i++){
         const div = document.createElement("div")
         container.appendChild(div).classList.add("grid-item")
-        div.style.cssText = `height:${(102400/(num**2))**(1/2)}px; width: ${(102400/(num**2))**(1/2)}px` 
+        div.style.cssText = `height:${(160000/(num**2))**(1/2)}px; width: ${(160000/(num**2))**(1/2)}px` 
    }
 }
 grids()
@@ -12,9 +12,9 @@ let gridItem = document.querySelectorAll(".grid-item")
 gridItem.forEach(item => item.addEventListener("mouseover", 
 function() {
     for(let i=1; i< gridItem.length; i++){
-        const red = Math.floor(Math.random() * 257)
-        const green = Math.floor(Math.random() * 257)
-        const blue = Math.floor(Math.random() * 257)
+        const red = Math.floor(Math.random() * 256)
+        const green = Math.floor(Math.random() * 256)
+        const blue = Math.floor(Math.random() * 256)
         item.style.backgroundColor = `rgb(${red},${green},${blue})`;
     }
 }))
