@@ -87,6 +87,8 @@ function eraser() {
 }
 
 function clearAll() {
-    gridItem.forEach(item => item.style.backgroundColor = `${container.style.backgroundColor}`)
-    backgroundColor(option)
+    gridItem.forEach(item => {
+        item.style.backgroundColor = "";
+    })
+    
 }
