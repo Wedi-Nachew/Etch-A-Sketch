@@ -64,7 +64,8 @@ button {
     height: 40px;
     border-radius: 10px;
     font-weight: 500;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    cursor:pointer;
 }
 
 #red, #red-bkg {
