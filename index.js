@@ -68,6 +68,23 @@ function colors(WhichOne = "black"){
     })) 
     }
 }
+function backgroundColor(option){
+    if(option =="red-bkg") {
+        container.style.backgroundColor = "red"
+    } else if (option == "white-bkg") {
+        container.style.backgroundColor = "white"
+    } else if(option =="black-bkg"){
+        container.style.backgroundColor = "black"
+    } else if(option == "green-bkg"){
+        container.style.backgroundColor = "green"
+    }
+}
+
+function eraser() {
+    gridItem.forEach(item => item.addEventListener("mouseover", ()=> {
+        item.style.backgroundColor = `${container.style.backgroundColor}`
+    }))
+}
 /*function border(){
     gridBorder.addEventListener("change", function (){
     if(this.checked){
