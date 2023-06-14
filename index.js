@@ -92,8 +92,18 @@ function clearAll() {
     })
     
 }
-
-const hideGrids = document.getElementById("hide-grids")
-hideGrids.addEventListener("click", ()=> {
-    gridItem.forEach(item => item.style.cssText = "border: none;")
+const border = document.querySelector("#border")
+border.addEventListener("change", () => {
+    if(border.checked){
+        gridItem.forEach(item => {
+            item.style.border = "1px solid gray"
+            })
+    } else {
+        gridItem.forEach(item => item.style.border = "none")
+    }
 })
+
+// const hideGrids = document.getElementById("hide-grids")
+// hideGrids.addEventListener("click", ()=> {
+//     gridItem.forEach(item => item.style.cssText = "border: none;")
+// })
