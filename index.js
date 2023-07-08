@@ -6,6 +6,7 @@ const black = document.querySelector("#black")
 const green = document.querySelector("#green")
 const multiColor = document.querySelector("#multi-color")
 const gridBorder = document.querySelector("#grid-border")
+const output = document.getElementById("output");
 
 
 let  grids = (num=16) => {
@@ -23,17 +24,15 @@ grids()
 let gridItem = document.querySelectorAll(".grid-item")
 gridItem.forEach(item => item.addEventListener("mouseover", colors))
 
-
-
 btn.addEventListener("input", function() {
 
     while(container.firstChild){
          container.removeChild(container.firstChild)
-     }
-     grids(btn.value);
-
-   gridItem = document.querySelectorAll(".grid-item")
-   gridItem.forEach(item => item.addEventListener("mouseover", colors))
+    }
+    grids(btn.value);
+    output.value = btn.value + " x " + btn.value;
+    gridItem = document.querySelectorAll(".grid-item")
+    gridItem.forEach(item => item.addEventListener("mouseover", colors))
 })
 
 function colors(WhichOne = "black"){
@@ -92,3 +91,4 @@ function clearAll() {
     })
     
 }
+
