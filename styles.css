@@ -111,5 +111,5 @@ p {
     margin-right: 10px;
 }
 #output::before{
-    content: "Grid items: ""
+    content: "Grid items: "
 }
