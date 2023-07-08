@@ -100,4 +100,5 @@ function setDefault(){
 }
 document.addEventListener("DOMContentLoaded", () =>{
     setDefault();
+    colors();
 })
