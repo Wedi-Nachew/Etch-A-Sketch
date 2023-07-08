@@ -112,3 +112,8 @@ p {
     margin-left: 15px;
     margin-right: 10px;
 }
+
+#output{
+    position: relative;
+    align-self: flex-start;
+}
