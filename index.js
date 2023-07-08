@@ -23,17 +23,14 @@ gridItem.forEach(item => item.addEventListener("mouseover", colors()))
 
 
 
-btn.addEventListener("click", function() {
-    // let numofGrids = prompt("how many columns and rows do you want to create")
+btn.addEventListener("input", function() {
 
-    while(container.firstChild){
-        container.removeChild(container.firstChild)
-    }
-
-    grids(24)
-
-   gridItem = document.querySelectorAll(".grid-item")
-   gridItem.forEach(item => item.addEventListener("mouseover", colors()))
+    while(container.firstChild && btn.value){
+         container.removeChild(container.firstChild)
+     }
+     grids(btn.value)
+//    gridItem = document.querySelectorAll(".grid-item")
+//    gridItem.forEach(item => item.addEventListener("mouseover", colors()))
 })
 
 function colors(WhichOne = "black"){
