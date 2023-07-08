@@ -10,12 +10,14 @@ const output = document.getElementById("output");
 
 
 let  grids = (num=16) => {
-    let size = Math.sqrt(160000/(num**2))
-    for(let i=1; i <= (num**2); i++){
+    let size = Math.sqrt(parseFloat(160000/(num**2)))
+    console.log(size)
+    for(let i=1; i <= (num ** 2); i++){
         const div = document.createElement("div")
         container.appendChild(div).classList.add("grid-item")
         div.style.cssText = `height:${size}px; 
         width: ${size}px` 
+        container.setAttribute(`style`, `grid: 1fr / repeat(${num}, 1fr)`)
    }
 }
 grids()
@@ -31,8 +33,9 @@ btn.addEventListener("input", function() {
     }
     grids(btn.value);
     output.value = btn.value + " x " + btn.value;
-    calc = `${((btn.value -16) / 86) * 100}`
-    output.style.left = `${calc - 1}% `
+    calc = `${((btn.value - 16) / 86) * 100}`
+    output.style.left = `${calc + 14}% `
+    console.log(btn.value)
     gridItem = document.querySelectorAll(".grid-item")
     gridItem.forEach(item => item.addEventListener("mouseover", colors))
 })

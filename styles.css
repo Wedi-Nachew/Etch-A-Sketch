@@ -36,9 +36,7 @@ h1 {
  }
 
  #container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
     height: 400px;
     width: 400px;
     border: none;
