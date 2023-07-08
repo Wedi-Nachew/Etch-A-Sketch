@@ -34,7 +34,9 @@ btn.addEventListener("input", function() {
     grids(btn.value);
     output.value = btn.value + " x " + btn.value;
     gridItem = document.querySelectorAll(".grid-item")
-    gridItem.forEach(item => item.addEventListener("mouseover", colors))
+    gridItem.forEach(item => item.addEventListener("mouseover",()=>{
+        colors();
+    }))
 })
 
 function colors(WhichOne = "black"){
