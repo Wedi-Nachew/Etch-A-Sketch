@@ -24,13 +24,13 @@ gridItem.forEach(item => item.addEventListener("mouseover", colors()))
 
 
 btn.addEventListener("click", function() {
-    let numofGrids = prompt("how many columns and rows do you want to create")
+    // let numofGrids = prompt("how many columns and rows do you want to create")
 
     while(container.firstChild){
         container.removeChild(container.firstChild)
     }
 
-   grids(numofGrids)
+    grids(24)
 
    gridItem = document.querySelectorAll(".grid-item")
    gridItem.forEach(item => item.addEventListener("mouseover", colors()))
@@ -92,18 +92,3 @@ function clearAll() {
     })
     
 }
-const border = document.querySelector("#border")
-border.addEventListener("change", () => {
-    if(border.checked){
-        gridItem.forEach(item => {
-            item.style.border = "1px solid gray"
-            })
-    } else {
-        gridItem.forEach(item => item.style.border = "none")
-    }
-})
-
-// const hideGrids = document.getElementById("hide-grids")
-// hideGrids.addEventListener("click", ()=> {
-//     gridItem.forEach(item => item.style.cssText = "border: none;")
-// })
