@@ -11,7 +11,6 @@ const output = document.getElementById("output");
 
 let  grids = (num=16) => {
     let size = Math.sqrt(parseFloat(160000/(num**2)))
-    console.log(size)
     for(let i=1; i <= (num ** 2); i++){
         const div = document.createElement("div")
         container.appendChild(div).classList.add("grid-item")

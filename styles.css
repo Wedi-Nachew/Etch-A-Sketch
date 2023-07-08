@@ -98,7 +98,6 @@ p {
     height: 40px;
     border-radius: 10px;
     align-items: center;
-    /* justify-content: space-around; */
 }
 #border-container p {
     font-weight: 500;
