@@ -9,28 +9,31 @@ const gridBorder = document.querySelector("#grid-border")
 
 
 let  grids = (num=16) => {
+    let size = Math.sqrt(160000/(num**2))
     for(let i=1; i <= (num**2); i++){
         const div = document.createElement("div")
         container.appendChild(div).classList.add("grid-item")
-        div.style.cssText = `height:${(160000/(num**2))**(1/2)}px; width: ${(160000/(num**2))**(1/2)}px` 
+        div.style.cssText = `height:${size}px; 
+        width: ${size}px` 
    }
 }
 grids()
 
 
 let gridItem = document.querySelectorAll(".grid-item")
-gridItem.forEach(item => item.addEventListener("mouseover", colors()))
+gridItem.forEach(item => item.addEventListener("mouseover", colors))
 
 
 
 btn.addEventListener("input", function() {
 
-    while(container.firstChild && btn.value){
+    while(container.firstChild){
          container.removeChild(container.firstChild)
      }
-     grids(btn.value)
-//    gridItem = document.querySelectorAll(".grid-item")
-//    gridItem.forEach(item => item.addEventListener("mouseover", colors()))
+     grids(btn.value);
+
+   gridItem = document.querySelectorAll(".grid-item")
+   gridItem.forEach(item => item.addEventListener("mouseover", colors))
 })
 
 function colors(WhichOne = "black"){
