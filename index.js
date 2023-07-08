@@ -94,3 +94,10 @@ function clearAll() {
     
 }
 
+function setDefault(){
+    btn.value = 16;
+    output.value = btn.value + " x " + btn.value;
+}
+document.addEventListener("DOMContentLoaded", () =>{
+    setDefault();
+})
