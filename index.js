@@ -95,6 +95,10 @@ function clearAll() {
     
 }
 
+gridBorder.addEventListener("click", ()=>{
+    gridItem.forEach(item => item.style.border= "1px solid gray");
+})
+
 function setDefault(){
     btn.value = 16;
     output.value = btn.value + " x " + btn.value;
