@@ -112,6 +112,14 @@ svg{
     height: auto;
 }
 
+svg:hover{
+    box-shadow: 0 0 10px gray;
+    border-radius: 50%;
+}
+button:hover{
+    box-shadow: 0 0 15px gray;
+}
+
 input,
 label{
     padding: 0;
