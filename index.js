@@ -1,8 +1,6 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#ask");
 const red = document.querySelector("#red")
-const white = document.querySelector("#white")
-const black = document.querySelector("#black")
 const green = document.querySelector("#green")
 const multiColor = document.querySelector("#multi-color")
 const gridBorder = document.querySelector("#grid-border")
@@ -61,7 +59,7 @@ gridBorder.addEventListener("click", () => {
     }
 })
 
-function colors(WhichOne="black") {
+function colors(WhichOne="pick") {
     if (WhichOne == "red") {
         selectedColor = "red";
         gridItem.forEach(item => item.addEventListener("mouseover",
@@ -79,12 +77,6 @@ function colors(WhichOne="black") {
         gridItem.forEach(item => item.addEventListener("mouseover",
             function () {
                 item.style.backgroundColor = "green";
-            }))
-    } else if (WhichOne == "black") {
-        selectedColor = "black"
-        gridItem.forEach(item => item.addEventListener("mouseover",
-            function () {
-                item.style.backgroundColor = "black";
             }))
     } else if (WhichOne == "multi-color") {
         selectedColor = "multi-color";
@@ -111,8 +103,6 @@ function randomColor() {
 function backgroundColor(option) {
     if (option == "red-bkg") {
         container.style.backgroundColor = "red"
-    } else if (option == "white-bkg") {
-        container.style.backgroundColor = "white"
     } else if (option == "black-bkg") {
         container.style.backgroundColor = "black"
     } else if (option == "green-bkg") {
@@ -143,9 +133,12 @@ pick.addEventListener("change" , ()=>{
 function setDefault() {
     btn.value = 16;
     output.value = btn.value + " x " + btn.value;
+    pick.value = "#000000";
+    pickBkg.value = "#aaaaaa";
+    markerSvg.style.fill = `${pick.value}`;
+    backgroundSvg.style.fill = `${pickBkg.value}`;
 }
 document.addEventListener("DOMContentLoaded", () => {
     setDefault();
     colors();
-    pick.value = "#000000";
 })
