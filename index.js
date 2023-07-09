@@ -9,10 +9,10 @@ const gridBorder = document.querySelector("#grid-border")
 const output = document.getElementById("output");
 let linesCount = 0;
 let selectedColor = "";
-const pick = document.getElementById("pick");
+const pick = document.getElementById("color-palette");
+const markerSvg = document.querySelector(".marker-svg");
+const backgroundSvg = document.querySelector(".background-svg")
 const pickBkg = document.getElementById("pick-bkg");
-
-
 
 let grids = (num = 16) => {
     let size = Math.sqrt(parseFloat((450 * 450)/ (num ** 2)))
@@ -90,7 +90,7 @@ function colors(WhichOne="black") {
         selectedColor = "multi-color";
         randomColor()
     } else if(WhichOne == "pick"){
-        selectedColor = pick.value
+        selectedColor = pick.value;
         gridItem.forEach(item => item.addEventListener("mouseover",
             function () {
                 item.style.backgroundColor = `${pick.value}`;
@@ -122,6 +122,7 @@ function backgroundColor(option) {
 
 pickBkg.addEventListener("change", ()=>{
     container.style.backgroundColor = `${pickBkg.value}`
+    backgroundSvg.style.fill = `${pickBkg.value}`
 })
 
 function eraser() {
@@ -135,6 +136,10 @@ function clearAll() {
         item.style.backgroundColor = "";
     })
 }
+pick.addEventListener("change" , ()=>{
+   markerSvg.style.fill = `${pick.value}`
+})
+
 function setDefault() {
     btn.value = 16;
     output.value = btn.value + " x " + btn.value;
@@ -142,4 +147,5 @@ function setDefault() {
 document.addEventListener("DOMContentLoaded", () => {
     setDefault();
     colors();
+    pick.value = "#000000";
 })

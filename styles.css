@@ -66,6 +66,7 @@ button {
     font-family: 'Courier New', Courier, monospace;
     cursor:pointer;
     border : none;
+    box-shadow: 0  0 5px gray;
 }
 
 #red, #red-bkg {
@@ -114,22 +115,13 @@ p {
     content: "Grid items: "
 }
 input[type="color"]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     padding: 0;
-    border: none;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-sizing: border-box;
+    visibility: hidden;
+    height: 0;
+    width: 0;
 }
-input[type="color"]::-webkit-color-swatch{
-    border-radius: 10px;
-    border: none;
-}
-input[type="color"]::-moz-color-swatch{
-    border-radius: 10px;
-    border: none;
+
+label{
+    width: 70px;
+    height: auto;
 }
