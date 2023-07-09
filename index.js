@@ -47,6 +47,7 @@ btn.addEventListener("input", () => {
     gridItem = document.querySelectorAll(".grid-item")
     gridItem.forEach(item => item.addEventListener("mouseover", colors)
     )})
+
 gridBorder.addEventListener("click", () => {
     if (!linesCount) {
         gridItem.forEach(item => item.style.border = "1px solid gray");
@@ -142,3 +143,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setDefault();
     colors();
 })
+
