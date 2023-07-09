@@ -10,6 +10,7 @@ const output = document.getElementById("output");
 let linesCount = 0;
 let selectedColor = "";
 const pick = document.getElementById("pick");
+const pickBkg = document.getElementById("pick-bkg");
 
 
 
@@ -118,6 +119,10 @@ function backgroundColor(option) {
         container.style.backgroundColor = "green"
     }
 }
+
+pickBkg.addEventListener("change", ()=>{
+    container.style.backgroundColor = `${pickBkg.value}`
+})
 
 function eraser() {
     gridItem.forEach(item => item.addEventListener("mouseover", () => {
