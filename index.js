@@ -9,6 +9,7 @@ const gridBorder = document.querySelector("#grid-border")
 const output = document.getElementById("output");
 let linesCount = 0;
 let selectedColor = "";
+const pick = document.getElementById("pick");
 
 
 
@@ -87,6 +88,12 @@ function colors(WhichOne="black") {
     } else if (WhichOne == "multi-color") {
         selectedColor = "multi-color";
         randomColor()
+    } else if(WhichOne == "pick"){
+        selectedColor = pick.value
+        gridItem.forEach(item => item.addEventListener("mouseover",
+            function () {
+                item.style.backgroundColor = `${pick.value}`;
+            }))
     }
 }
 
@@ -122,7 +129,6 @@ function clearAll() {
     gridItem.forEach(item => {
         item.style.backgroundColor = "";
     })
-
 }
 function setDefault() {
     btn.value = 16;
