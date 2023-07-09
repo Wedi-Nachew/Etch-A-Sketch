@@ -8,6 +8,7 @@ const multiColor = document.querySelector("#multi-color")
 const gridBorder = document.querySelector("#grid-border")
 const output = document.getElementById("output");
 let linesCount = 0;
+let selectedColor = "";
 
 
 
@@ -18,14 +19,24 @@ let grids = (num = 16) => {
         container.appendChild(div).classList.add("grid-item")
         div.style.cssText = `height:${size}px; 
         width: ${size}px;`
+        div.addEventListener("mouseover", ()=> {
+            if(selectedColor== "multi-color"){
+                randomColor();
+            }else {
+                div.style.backgroundColor= `${selectedColor}`;
+            }
+        })
         container.setAttribute(`style`, `grid: 1fr / repeat(${num}, 1fr)`);
-        (linesCount) ? div.style.cssText += "border: 1px solid gray" : div.style.cssText += "border: none"
+        (linesCount) ? div.style.cssText += "border: 1px solid gray" 
+        : div.style.cssText += "border: none"
     }
+    
 }
 grids()
-
+    
 let gridItem = document.querySelectorAll(".grid-item")
 gridItem.forEach(item => item.addEventListener("mouseover", colors))
+
 
 btn.addEventListener("input", () => {
     while (container.firstChild) {
@@ -34,10 +45,8 @@ btn.addEventListener("input", () => {
     grids(btn.value);
     output.value = btn.value + " x " + btn.value;
     gridItem = document.querySelectorAll(".grid-item")
-    gridItem.forEach(item => item.addEventListener("mouseover", () => {
-        colors();
-    }))
-})
+    gridItem.forEach(item => item.addEventListener("mouseover", colors)
+    )})
 gridBorder.addEventListener("click", () => {
     if (!linesCount) {
         gridItem.forEach(item => item.style.border = "1px solid gray");
@@ -50,39 +59,47 @@ gridBorder.addEventListener("click", () => {
     }
 })
 
-function colors(WhichOne = "black") {
+function colors(WhichOne="black") {
     if (WhichOne == "red") {
+        selectedColor = "red";
         gridItem.forEach(item => item.addEventListener("mouseover",
             function () {
                 item.style.backgroundColor = "red";
             }))
     } else if (WhichOne == "white") {
+        selectedColor = "white";
         gridItem.forEach(item => item.addEventListener("mouseover",
             function () {
                 item.style.backgroundColor = "white";
             }))
     } else if (WhichOne == "green") {
+        selectedColor = "green";
         gridItem.forEach(item => item.addEventListener("mouseover",
             function () {
                 item.style.backgroundColor = "green";
             }))
     } else if (WhichOne == "black") {
+        selectedColor = "black"
         gridItem.forEach(item => item.addEventListener("mouseover",
             function () {
                 item.style.backgroundColor = "black";
             }))
     } else if (WhichOne == "multi-color") {
-        gridItem.forEach(item => item.addEventListener("mouseover",
-            function () {
-                for (let i = 1; i < gridItem.length; i++) {
-                    const red = Math.floor(Math.random() * 256)
-                    const green = Math.floor(Math.random() * 256)
-                    const blue = Math.floor(Math.random() * 256)
-                    item.style.backgroundColor = `rgb(${red},${green},${blue})`;
-                }
-            }))
+        selectedColor = "multi-color";
+        randomColor()
     }
 }
+
+function randomColor() {
+    gridItem.forEach(item => item.addEventListener("mouseover", () => {
+        for (let i = 1; i < gridItem.length; i++) {
+            const red = Math.floor(Math.random() * 256)
+            const green = Math.floor(Math.random() * 256)
+            const blue = Math.floor(Math.random() * 256)
+            item.style.backgroundColor = `rgb(${red},${green},${blue})`;
+        }}))
+}
+
 function backgroundColor(option) {
     if (option == "red-bkg") {
         container.style.backgroundColor = "red"
@@ -107,9 +124,6 @@ function clearAll() {
     })
 
 }
-
-
-
 function setDefault() {
     btn.value = 16;
     output.value = btn.value + " x " + btn.value;
