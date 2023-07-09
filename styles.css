@@ -25,7 +25,7 @@ h1 {
  #marker {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    box-shadow: 0 0  10px gray;
     padding: 30px;
     justify-content: space-evenly;
     align-items: center;
@@ -40,7 +40,7 @@ h1 {
     height: 450px;
     width: 450px;
     border: none;
-    border: 1px solid black;
+    box-shadow: 0 0  10px gray;
     background-color: #fefae0;
     border-radius: 5px;
 }
@@ -48,7 +48,7 @@ h1 {
 #background {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    box-shadow: 0 0  10px gray;
     padding: 30px;
     justify-content: space-evenly;
     align-items: center;
@@ -64,9 +64,9 @@ button {
     border-radius: 10px;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
-    cursor:pointer;
     border : none;
     box-shadow: 0  0 5px gray;
+    background-color: transparent;
 }
 
 #red, #red-bkg {
@@ -92,20 +92,6 @@ button {
 }
 p {
     font-weight: 700;
-}
-#border-container{
-    display: flex;
-    border: 1px solid gray;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    align-items: center;
-}
-#border-container p {
-    font-weight: 500;
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 3px;
-    font-size: 14px;
 }
 #border {
     margin-left: 15px;
