@@ -65,6 +65,7 @@ button {
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
     cursor:pointer;
+    border : none;
 }
 
 #red, #red-bkg {
@@ -111,4 +112,24 @@ p {
 }
 #output::before{
     content: "Grid items: "
+}
+input[type="color"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+input[type="color"]::-webkit-color-swatch{
+    border-radius: 10px;
+    border: none;
+}
+input[type="color"]::-moz-color-swatch{
+    border-radius: 10px;
+    border: none;
 }
