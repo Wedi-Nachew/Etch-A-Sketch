@@ -111,3 +111,12 @@ svg{
     width: 70px;
     height: auto;
 }
+
+input,
+label{
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
